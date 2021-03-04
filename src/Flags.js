@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Script";
 const Flags = () => {
   //hooks para troca de cores
   const [primeiraCor, setPrimeiraCor] = useState("white");
