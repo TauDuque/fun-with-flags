@@ -1,0 +1,77 @@
+body {
+  background-image: url("../src/sheldon2.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  margin-top: 110px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 55vh;
+  width: 500px;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 8px 15px rgba(5, 5, 5, 0.7);
+}
+
+.shelly {
+  border-radius: 50%;
+  height: 110px;
+  position: relative;
+  left: 213px;
+  box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
+}
+
+.flag-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 25px;
+  left: 17px;
+}
+
+.primeiraCor {
+  height: 145px;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  border: 1px solid black;
+  background: #ffffff;
+  border-width: 3px 1px 3px 3px;
+}
+
+.segundaCor {
+  height: 145px;
+  width: 100px;
+  background: #191970;
+  border: 1px solid black;
+  border-width: 3px 1px;
+}
+
+.terceiraCor {
+  height: 145px;
+  width: 100px;
+  background: #000000;
+  border: 1px solid black;
+  border-width: 3px 3px 3px 1px;
+}
+
+.bazinga-container {
+  display: flex;
+  margin-top: 110px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 55vh;
+  width: 500px;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 8px 15px rgba(5, 5, 5, 0.7);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+}
