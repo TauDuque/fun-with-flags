@@ -1,13 +1,17 @@
-import "./Script";
-
 const Bazinga = () => {
   return (
     <div className="bazinga-container">
       <img
-        src="./sheldon_bazinga.jpeg"
+        src="./bazinga-shelly1.jpg"
         alt="Sheldon Bazinga"
-        className="shelly"
+        className="shellyB"
       />
+      <h3>Bazinga!!!</h3>
+      <div className="france-container">
+        <div className="primeiraCorFrança"></div>
+        <div className="segundaCorFrança"></div>
+        <div className="terceiraCorFrança"></div>
+      </div>
     </div>
   );
 };

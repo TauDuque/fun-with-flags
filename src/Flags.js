@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 const Flags = () => {
   //hooks para troca de cores
   const [primeiraCor, setPrimeiraCor] = useState("white");
@@ -17,26 +17,19 @@ const Flags = () => {
 
   //hooks para checar bandeiras
   const [isFrance, setIsFrance] = useState(false);
+
   console.log(isFrance);
-  const franceFlagFound = () => {
-    if (
-      isFirstBlueOn === true &&
-      isSecondWhiteOn === true &&
-      isThirdRedOn === true
-    ) {
-      setIsFrance(true);
-    }
-  };
 
   const primeiraCorFundo = () => {
     if (primeiraCor === "white") {
       setPrimeiraCor("red");
     }
     if (primeiraCor === "red") {
-      setPrimeiraCor("blue");
       setIsFirstBlueOn(true);
+      setPrimeiraCor("blue");
     }
     if (primeiraCor === "blue") {
+      setIsFirstBlueOn(false);
       setPrimeiraCor("orange");
     }
     if (primeiraCor === "orange") {
@@ -51,17 +44,17 @@ const Flags = () => {
     if (primeiraCor === "yellow") {
       setPrimeiraCor("white");
     }
-    franceFlagFound();
   };
   const segundaCorFundo = () => {
     if (segundaCor === "blue") {
       setSegundaCor("red");
     }
     if (segundaCor === "red") {
-      setSegundaCor("white");
       setIsSecondWhiteOn(true);
+      setSegundaCor("white");
     }
     if (segundaCor === "white") {
+      setIsSecondWhiteOn(false);
       setSegundaCor("orange");
     }
     if (segundaCor === "orange") {
@@ -76,16 +69,16 @@ const Flags = () => {
     if (segundaCor === "yellow") {
       setSegundaCor("blue");
     }
-    franceFlagFound();
   };
-  const terceiraCorFundo = () => {
+
+  function terceiraCorFundo() {
     if (terceiraCor === "black") {
-      setTerceiraCor("red");
       setIsThirdRedOn(true);
+      setTerceiraCor("red");
     }
     if (terceiraCor === "red") {
-      setTerceiraCor("white");
       setIsThirdRedOn(false);
+      setTerceiraCor("white");
     }
     if (terceiraCor === "white") {
       setTerceiraCor("green");
@@ -102,8 +95,19 @@ const Flags = () => {
     if (terceiraCor === "orange") {
       setTerceiraCor("black");
     }
-    franceFlagFound();
-  };
+  }
+  useLayoutEffect(() => {
+    if (
+      isFirstBlueOn === true &&
+      isSecondWhiteOn === true &&
+      isThirdRedOn === true
+    ) {
+      console.log("foi foi foi");
+      setIsFrance(true);
+    } else {
+      console.log("ihhh");
+    }
+  }, [isFrance]);
 
   return (
     <div className="container">
@@ -113,19 +117,19 @@ const Flags = () => {
           style={{ background: primeiraCor }}
           className="primeiraCor"
           id="primeiraCor"
-          onMouseEnter={primeiraCorFundo}
+          onMouseEnter={() => primeiraCorFundo()}
         ></div>
         <div
           style={{ background: segundaCor }}
           className="segundaCor"
           id="segundaCor"
-          onMouseEnter={segundaCorFundo}
+          onMouseEnter={() => segundaCorFundo()}
         ></div>
         <div
           style={{ background: terceiraCor }}
           className="terceiraCor"
           id="terceiraCor"
-          onMouseEnter={terceiraCorFundo}
+          onMouseEnter={() => terceiraCorFundo()}
         ></div>
       </div>
     </div>
