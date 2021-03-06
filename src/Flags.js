@@ -96,7 +96,7 @@ const Flags = () => {
       setTerceiraCor("black");
     }
   }
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (
       isFirstBlueOn === true &&
       isSecondWhiteOn === true &&
@@ -106,8 +106,9 @@ const Flags = () => {
       setIsFrance(true);
     } else {
       console.log("ihhh");
+      setIsFrance(false);
     }
-  }, [isFrance]);
+  }, [isFrance, isSecondWhiteOn, isThirdRedOn, isFirstBlueOn]);
 
   return (
     <div className="container">
