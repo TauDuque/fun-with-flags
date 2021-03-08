@@ -13,13 +13,13 @@ const Country = ({
   isCosta,
 }) => {
   if (isFrance) {
-    return <h4>França</h4>;
+    return <h4 className="france-style">França</h4>;
   }
   if (isGuine) {
     return <h4>Guiné</h4>;
   }
   if (isIrlanda) {
-    return <h4>Irlanda</h4>;
+    return <h4 className="irlanda-style">Irlanda</h4>;
   }
   if (isItalia) {
     return <h4>Itália</h4>;
@@ -28,10 +28,10 @@ const Country = ({
     return <h4>Mali</h4>;
   }
   if (isRomenia) {
-    return <h4>Romênia</h4>;
+    return <h4 className="romenia-style">Romênia</h4>;
   }
   if (isBelgica) {
-    return <h4>Bélgica</h4>;
+    return <h4 className="belgica-style">Bélgica</h4>;
   }
   if (isPeru) {
     return <h4>Perú</h4>;
@@ -40,7 +40,7 @@ const Country = ({
     return <h4 className="nigeria-style">Nigéria</h4>;
   }
   if (isCosta) {
-    return <h4>Costa do Marfim</h4>;
+    return <h4 className="costa-style">Costa do Marfim</h4>;
   } else {
     return <h4 className="country-style">Country</h4>;
   }

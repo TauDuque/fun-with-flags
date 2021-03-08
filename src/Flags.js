@@ -213,7 +213,7 @@ const Flags = () => {
     if (
       isFirstOrangeOn === true &&
       isSecondWhiteOn === true &&
-      setIsThirdGreenOn === true
+      isThirdGreenOn === true
     ) {
       setIsCosta(true);
     } else {

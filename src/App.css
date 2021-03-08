@@ -121,5 +121,25 @@ h4 {
   right: 85px;
 }
 
+.france-style {
+  right: 84px;
+}
+
+.belgica-style {
+  right: 83px;
+}
+
+.irlanda-style {
+  right: 86px;
+}
+
+.costa-style {
+  right: 120px;
+}
+
+.romenia-style {
+  right: 92px;
+}
+
 . @media (prefers-reduced-motion: no-preference) {
 }
