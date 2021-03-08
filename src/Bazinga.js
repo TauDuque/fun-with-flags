@@ -1,16 +1,17 @@
+import "./App.css";
 const Bazinga = () => {
   return (
-    <div className="bazinga-container">
+    <div className="container">
       <img
         src="./bazinga-shelly1.jpg"
         alt="Sheldon Bazinga"
         className="shellyB"
       />
       <h3>Bazinga!!!</h3>
-      <div className="france-container">
-        <div className="primeiraCorFrança"></div>
-        <div className="segundaCorFrança"></div>
-        <div className="terceiraCorFrança"></div>
+      <div className="flag-container">
+        <div className="primeiraCor"></div>
+        <div className="segundaCor"></div>
+        <div className="terceiraCor"></div>
       </div>
     </div>
   );

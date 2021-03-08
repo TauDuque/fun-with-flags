@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gaegu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
 body {
   background-image: url("../src/sheldon2.gif");
@@ -21,9 +22,17 @@ body {
 
 .shelly {
   border-radius: 50%;
-  height: 110px;
-  position: relative;
-  left: 213px;
+  height: 130px;
+  position: absolute;
+  left: 263px;
+  box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
+}
+
+.shellyB {
+  border-radius: 50%;
+  height: 130px;
+  position: absolute;
+  left: 275px;
   box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
 }
 
@@ -32,8 +41,8 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  top: 25px;
-  left: 17px;
+  top: 82px;
+  left: 100px;
 }
 
 .primeiraCor {
@@ -75,58 +84,27 @@ body {
   box-shadow: 0 8px 15px rgba(5, 5, 5, 0.7);
 }
 
-.shellyB {
-  border-radius: 50%;
-  height: 130px;
-  position: relative;
-  left: 213px;
-  box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
-}
-
-h3 {
+.palavras1 {
   display: flex;
   align-items: center;
-  position: relative;
-  left: 87px;
-  bottom: 40px;
+  position: absolute;
+  left: 225px;
+  bottom: 380px;
   font-family: "Londrina Shadow", cursive;
   font-size: 2.5rem;
-  width: 25px;
   letter-spacing: 5px;
 }
 
-.primeiraCorFrança {
-  height: 145px;
-  width: 100px;
-  top: 50%;
-  left: 50%;
-  border: 1px solid black;
-  background: blue;
-  border-width: 3px 1px 3px 3px;
-}
-
-.segundaCorFrança {
-  height: 145px;
-  width: 100px;
-  background: white;
-  border: 1px solid black;
-  border-width: 3px 1px;
-}
-
-.terceiraCorFrança {
-  height: 145px;
-  width: 100px;
-  background: red;
-  border: 1px solid black;
-  border-width: 3px 3px 3px 1px;
-}
-
-.france-container {
+.palavras2 {
   display: flex;
-  position: relative;
   align-items: center;
-  top: 82px;
-  right: 9px;
+  position: absolute;
+  left: 203px;
+  bottom: 380px;
+  font-family: "Gaegu", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: -4px;
 }
 
 . @media (prefers-reduced-motion: no-preference) {
