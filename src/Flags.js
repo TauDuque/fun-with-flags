@@ -1,5 +1,6 @@
-import { useEffect, useLayoutEffect, useState } from "react";
-import Bazinga from "./Bazinga";
+import { useEffect, useState } from "react";
+import Country from "./Country";
+
 const Flags = () => {
   //hooks para troca de cores
   const [primeiraCor, setPrimeiraCor] = useState("white");
@@ -320,6 +321,18 @@ const Flags = () => {
           onMouseEnter={() => terceiraCorFundo()}
         ></div>
       </div>
+      <Country
+        isFrance={isFrance}
+        isGuine={isGuine}
+        isIrlanda={isIrlanda}
+        isItalia={isItaly}
+        isMali={isMali}
+        isRomenia={isRomenia}
+        isNigeria={isNigeria}
+        isPeru={isPeru}
+        isBelgica={isBelgica}
+        isCosta={isCosta}
+      />
     </div>
   );
 };

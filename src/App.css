@@ -107,5 +107,16 @@ body {
   letter-spacing: -4px;
 }
 
+h4 {
+  display: flex;
+  position: relative;
+  top: 360px;
+  right: 89px;
+}
+
+.country-style {
+  opacity: 0;
+}
+
 . @media (prefers-reduced-motion: no-preference) {
 }
