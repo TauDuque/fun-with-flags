@@ -46,7 +46,6 @@ const Flags = () => {
 
   //hook para mudança de imagem e texto
   const [isFlagOn, setIsFlagOn] = useState(false);
-  console.log(isFlagOn);
 
   const cores = ["black", "green", "red", "orange", "white", "blue", "yellow"];
 
