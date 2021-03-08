@@ -84,38 +84,41 @@ body {
   box-shadow: 0 8px 15px rgba(5, 5, 5, 0.7);
 }
 
-.palavras1 {
+h3 {
   display: flex;
   align-items: center;
   position: absolute;
-  left: 225px;
-  bottom: 380px;
-  font-family: "Londrina Shadow", cursive;
+  bottom: 375px;
   font-size: 2.5rem;
+}
+
+.palavras1 {
+  font-family: "Londrina Shadow", cursive;
+  left: 225px;
   letter-spacing: 5px;
 }
 
 .palavras2 {
-  display: flex;
-  align-items: center;
-  position: absolute;
   left: 203px;
-  bottom: 380px;
   font-family: "Gaegu", cursive;
-  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: -4px;
 }
 
+/* nome dos países */
 h4 {
   display: flex;
   position: relative;
   top: 360px;
-  right: 89px;
+  right: 78px;
 }
 
 .country-style {
   opacity: 0;
+}
+
+.nigeria-style {
+  right: 85px;
 }
 
 . @media (prefers-reduced-motion: no-preference) {

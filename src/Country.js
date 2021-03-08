@@ -37,7 +37,7 @@ const Country = ({
     return <h4>Perú</h4>;
   }
   if (isNigeria) {
-    return <h4>Nigéria</h4>;
+    return <h4 className="nigeria-style">Nigéria</h4>;
   }
   if (isCosta) {
     return <h4>Costa do Marfim</h4>;
