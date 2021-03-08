@@ -8,7 +8,6 @@ const Flags = () => {
   const [terceiraCor, setTerceiraCor] = useState("black");
   //hooks paras checar as cores da primeira coluna
   const [isFirstBlueOn, setIsFirstBlueOn] = useState(false);
-  console.log(isFirstBlueOn);
   const [isFirstBlackOn, setIsFirstBlackOn] = useState(false);
   const [isFirstGreenOn, setIsFirstGreenOn] = useState(false);
   const [isFirstRedOn, setIsFirstRedOn] = useState(false);
@@ -23,7 +22,6 @@ const Flags = () => {
   const [isSecondBlueOn, setIsSecondBlueOn] = useState(false);
   const [isSecondYellowOn, setIsSecondYellowOn] = useState(false);
   const [isSecondOrangeOn, setIsSecondOrangeOn] = useState(false);
-  console.log(isSecondWhiteOn);
 
   //hooks paras checar as cores da terceira coluna
   const [isThirdRedOn, setIsThirdRedOn] = useState(false);
@@ -33,7 +31,6 @@ const Flags = () => {
   const [isThirdYellowOn, setIsThirdYellowOn] = useState(false);
   const [isThirdOrangeOn, setIsThirdOrangeOn] = useState(false);
   const [isThirdBlackOn, setIsThirdBlackOn] = useState(false);
-  console.log(isThirdRedOn);
 
   //hooks para checar bandeiras
   const [isFrance, setIsFrance] = useState(false);
@@ -47,7 +44,9 @@ const Flags = () => {
   const [isIrlanda, setIsIrlanda] = useState(false);
   const [isCosta, setIsCosta] = useState(false);
 
-  console.log(isFrance);
+  //hook para mudança de imagem e texto
+  const [isFlagOn, setIsFlagOn] = useState(false);
+  console.log(isFlagOn);
 
   const cores = ["black", "green", "red", "orange", "white", "blue", "yellow"];
 
@@ -173,98 +172,88 @@ const Flags = () => {
 
   useEffect(() => {
     if (
-      isFirstBlueOn === true &&
-      isSecondWhiteOn === true &&
-      isThirdRedOn === true
+      isFrance ||
+      isItaly ||
+      isMali ||
+      isPeru ||
+      isRomenia ||
+      isGuine ||
+      isNigeria ||
+      isBelgica ||
+      isIrlanda ||
+      isCosta
     ) {
-      console.log("foi foi foi");
+      setIsFlagOn(true);
+    } else {
+      setIsFlagOn(false);
+    }
+  }, [
+    isFrance,
+    isFlagOn,
+    isItaly,
+    isMali,
+    isPeru,
+    isRomenia,
+    isGuine,
+    isNigeria,
+    isBelgica,
+    isIrlanda,
+    isCosta,
+  ]);
+
+  useEffect(() => {
+    if (isFirstBlueOn && isSecondWhiteOn && isThirdRedOn) {
       setIsFrance(true);
     } else {
-      console.log("ihhh");
       setIsFrance(false);
     }
-    if (
-      isFirstBlackOn === true &&
-      isSecondYellowOn === true &&
-      isThirdRedOn === true
-    ) {
+    if (isFirstBlackOn && isSecondYellowOn && isThirdRedOn) {
       setIsBelgica(true);
     } else {
       setIsBelgica(false);
     }
-    if (
-      isFirstGreenOn === true &&
-      isSecondWhiteOn === true &&
-      isThirdOrangeOn === true
-    ) {
+    if (isFirstGreenOn && isSecondWhiteOn && isThirdOrangeOn) {
       setIsIrlanda(true);
     } else {
       setIsIrlanda(false);
     }
-    if (
-      isFirstBlueOn === true &&
-      isSecondYellowOn === true &&
-      isThirdRedOn === true
-    ) {
+    if (isFirstBlueOn && isSecondYellowOn && isThirdRedOn) {
       setIsRomenia(true);
     } else {
       setIsRomenia(false);
     }
-    if (
-      isFirstOrangeOn === true &&
-      isSecondWhiteOn === true &&
-      isThirdGreenOn === true
-    ) {
+    if (isFirstOrangeOn && isSecondWhiteOn && isThirdGreenOn) {
       setIsCosta(true);
     } else {
       setIsCosta(false);
     }
-    if (
-      isFirstRedOn === true &&
-      isSecondYellowOn === true &&
-      isThirdGreenOn === true
-    ) {
+    if (isFirstRedOn && isSecondYellowOn && isThirdGreenOn) {
       setIsGuine(true);
     } else {
       setIsGuine(false);
     }
-    if (
-      isFirstRedOn === true &&
-      isSecondWhiteOn === true &&
-      isThirdRedOn === true
-    ) {
+    if (isFirstRedOn && isSecondWhiteOn && isThirdRedOn) {
       setIsPeru(true);
     } else {
       setIsPeru(false);
     }
-    if (
-      isFirstGreenOn === true &&
-      isSecondWhiteOn === true &&
-      isThirdGreenOn === true
-    ) {
+    if (isFirstGreenOn && isSecondWhiteOn && isThirdGreenOn) {
       setIsNigeria(true);
     } else {
       setIsNigeria(false);
     }
-    if (
-      isFirstGreenOn === true &&
-      isSecondYellowOn === true &&
-      isThirdRedOn === true
-    ) {
+    if (isFirstGreenOn && isSecondYellowOn && isThirdRedOn) {
       setIsMali(true);
     } else {
       setIsMali(false);
     }
-    if (
-      isFirstGreenOn === true &&
-      isSecondWhiteOn === true &&
-      isThirdRedOn === true
-    ) {
+    if (isFirstGreenOn && isSecondWhiteOn && isThirdRedOn) {
       setIsItaly(true);
     } else {
       setIsItaly(false);
     }
   }, [
+    isFlagOn,
     isFrance,
     isCosta,
     isGuine,
@@ -273,6 +262,8 @@ const Flags = () => {
     isNigeria,
     isPeru,
     isBelgica,
+    isItaly,
+    isMali,
     isFirstBlueOn,
     isFirstOrangeOn,
     isFirstGreenOn,
@@ -286,7 +277,7 @@ const Flags = () => {
   ]);
   return (
     <div className="container">
-      {isFrance === false ? (
+      {!isFlagOn ? (
         <img src="./shelly.jpg" alt="Sheldon Cooper" className="shelly" />
       ) : (
         <img
@@ -295,7 +286,7 @@ const Flags = () => {
           className="shellyB"
         />
       )}
-      {isFrance === false ? (
+      {!isFlagOn ? (
         <h3 className="palavras2">fun&nbsp;with&nbsp;flags</h3>
       ) : (
         <h3 className="palavras1">Bazinga!!!</h3>
