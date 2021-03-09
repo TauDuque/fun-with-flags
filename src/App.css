@@ -89,6 +89,7 @@ h3 {
   display: flex;
   position: relative;
   justify-content: center;
+  height: 48px;
   bottom: 35px;
   font-size: 2.5rem;
 }
@@ -101,7 +102,21 @@ h3 {
 .palavras2 {
   font-family: "Gaegu", cursive;
   text-transform: uppercase;
-  letter-spacing: -4px;
+  font-weight: 400;
+  letter-spacing: -3px;
+  background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #ca4147 60%);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* nome dos países */
@@ -115,30 +130,6 @@ h4 {
 .country-style {
   opacity: 0;
 }
-
-/* .nigeria-style {
-  right: 87px;
-}
-
-.france-style {
-  right: 84px;
-}
-
-.belgica-style {
-  right: 83px;
-}
-
-.irlanda-style {
-  right: 86px;
-}
-
-.costa-style {
-  right: 120px;
-}
-
-.romenia-style {
-  right: 92px;
-} */
 
 . @media (prefers-reduced-motion: no-preference) {
 }
