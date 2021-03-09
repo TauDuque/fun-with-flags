@@ -10,6 +10,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   margin-top: 110px;
   margin-left: 20px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -22,17 +23,19 @@ body {
 
 .shelly {
   border-radius: 50%;
-  height: 130px;
-  position: absolute;
-  left: 263px;
+  width: 115px;
+  height: 125px;
+  position: relative;
+  left: 190px;
   box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
 }
 
 .shellyB {
   border-radius: 50%;
-  height: 130px;
-  position: absolute;
-  left: 275px;
+  height: 125px;
+  width: 125px;
+  position: relative;
+  left: 190px;
   box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
 }
 
@@ -40,9 +43,7 @@ body {
   display: flex;
   position: relative;
   justify-content: center;
-  align-items: center;
-  top: 82px;
-  left: 100px;
+  bottom: 68px;
 }
 
 .primeiraCor {
@@ -86,20 +87,18 @@ body {
 
 h3 {
   display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 308px;
+  position: relative;
+  justify-content: center;
+  bottom: 35px;
   font-size: 2.5rem;
 }
 
 .palavras1 {
   font-family: "Londrina Shadow", cursive;
-  left: 225px;
   letter-spacing: 5px;
 }
 
 .palavras2 {
-  left: 205px;
   font-family: "Gaegu", cursive;
   text-transform: uppercase;
   letter-spacing: -4px;
@@ -109,15 +108,15 @@ h3 {
 h4 {
   display: flex;
   position: relative;
-  top: 335px;
-  right: 78px;
+  justify-content: center;
+  bottom: 75px;
 }
 
 .country-style {
   opacity: 0;
 }
 
-.nigeria-style {
+/* .nigeria-style {
   right: 87px;
 }
 
@@ -139,7 +138,7 @@ h4 {
 
 .romenia-style {
   right: 92px;
-}
+} */
 
 . @media (prefers-reduced-motion: no-preference) {
 }
