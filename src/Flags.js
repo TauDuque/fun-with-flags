@@ -282,7 +282,7 @@ const Flags = () => {
         <img
           src="./bazinga-shelly1.jpg"
           alt="Sheldon Cooper Bazinga"
-          className="shellyB"
+          className="shelly"
         />
       )}
       {!isFlagOn ? (
@@ -296,19 +296,19 @@ const Flags = () => {
           style={{ background: primeiraCor }}
           className="primeiraCor"
           id="primeiraCor"
-          onMouseEnter={() => primeiraCorFundo()}
+          onMouseEnter={primeiraCorFundo}
         ></div>
         <div
           style={{ background: segundaCor }}
           className="segundaCor"
           id="segundaCor"
-          onMouseEnter={() => segundaCorFundo()}
+          onMouseEnter={segundaCorFundo}
         ></div>
         <div
           style={{ background: terceiraCor }}
           className="terceiraCor"
           id="terceiraCor"
-          onMouseEnter={() => terceiraCorFundo()}
+          onMouseEnter={terceiraCorFundo}
         ></div>
       </div>
       <Country

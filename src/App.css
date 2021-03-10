@@ -23,19 +23,10 @@ body {
 
 .shelly {
   border-radius: 50%;
-  width: 115px;
-  height: 125px;
+  width: 7rem;
+  height: 7.9rem;
   position: relative;
-  left: 190px;
-  box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
-}
-
-.shellyB {
-  border-radius: 50%;
-  height: 125px;
-  width: 125px;
-  position: relative;
-  left: 190px;
+  left: 12.2rem;
   box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
 }
 
@@ -43,7 +34,7 @@ body {
   display: flex;
   position: relative;
   justify-content: center;
-  bottom: 68px;
+  bottom: 3.8rem;
 }
 
 .primeiraCor {
@@ -89,8 +80,8 @@ h3 {
   display: flex;
   position: relative;
   justify-content: center;
-  height: 48px;
-  bottom: 35px;
+  height: 2.9rem;
+  bottom: 2rem;
   font-size: 2.5rem;
 }
 
@@ -124,12 +115,39 @@ h4 {
   display: flex;
   position: relative;
   justify-content: center;
-  bottom: 75px;
+  bottom: 4.5rem;
 }
 
 .country-style {
   opacity: 0;
 }
 
-. @media (prefers-reduced-motion: no-preference) {
+@media screen and (max-width: 600px) {
+  .container {
+    width: 250px;
+  }
+
+  .shelly {
+    border-radius: 50%;
+    width: 90px;
+    height: 110px;
+    position: relative;
+    left: 80px;
+    box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
+  }
+}
+@media screen and (max-height: 645px) {
+  .container {
+    width: 250px;
+    height: 22rem;
+  }
+
+  .shelly {
+    border-radius: 50%;
+    width: 90px;
+    height: 110px;
+    position: relative;
+    left: 80px;
+    box-shadow: 0 8px 15px rgba(5, 5, 5, 0.9);
+  }
 }
