@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Country from "./Country";
+import Bazinga from "./Bazinga";
 
 const Flags = () => {
   //hooks para troca de cores
@@ -46,6 +47,9 @@ const Flags = () => {
 
   //hook para mudança de imagem e texto
   const [isFlagOn, setIsFlagOn] = useState(false);
+
+  //hook bandeira
+  const [isFranceFound, setIsFranceFound] = useState(false);
 
   const cores = ["black", "green", "red", "orange", "white", "blue", "yellow"];
 
@@ -290,25 +294,24 @@ const Flags = () => {
       ) : (
         <h3 className="palavras1">Bazinga!!!</h3>
       )}
-
       <div className="flag-container">
         <div
           style={{ background: primeiraCor }}
           className="primeiraCor"
           id="primeiraCor"
-          onMouseEnter={primeiraCorFundo}
+          onClick={primeiraCorFundo}
         ></div>
         <div
           style={{ background: segundaCor }}
           className="segundaCor"
           id="segundaCor"
-          onMouseEnter={segundaCorFundo}
+          onClick={segundaCorFundo}
         ></div>
         <div
           style={{ background: terceiraCor }}
           className="terceiraCor"
           id="terceiraCor"
-          onMouseEnter={terceiraCorFundo}
+          onClick={terceiraCorFundo}
         ></div>
       </div>
       <Country
@@ -323,6 +326,7 @@ const Flags = () => {
         isBelgica={isBelgica}
         isCosta={isCosta}
       />
+      <Bazinga isFrance={isFrance} />;
     </div>
   );
 };
